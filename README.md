@@ -50,16 +50,7 @@ An evaluation that predicts athlete `Weight` from the Olympic `athlete_events.cs
 - **Variable analysis:** Classified categorical variables as nominal, ordinal, or high-cardinality, and numerical variables by distribution and outliers.
 - **Modeling:** Built a `Pipeline` with `ColumnTransformer` that standardizes numerical features and one-hot encodes categorical ones (using `max_categories` and `min_frequency` to limit high-cardinality columns). Trained a `LinearRegression` model on an 80/20 split with `random_state=1`, and then added features in a second version.
 
-### 3. Churn Classification: Logistic Regression (`Taller_regresión_logística.ipynb`)
-
-A tuning workshop that builds a logistic regression model to predict `Churn Label` using eight features: Contract, Dependents, Online Security, Tenure Months, Senior Citizen, Payment Method, Internet Service, and Monthly Charges.
-
-- **Model 1:** Tune `C` and `l1_ratio` with a metric that prioritizes correctly identifying customers who churn, then address class imbalance if the model is unbalanced.
-- **Model 2:** Repeat the tuning with a metric that prioritizes correctly identifying customers who stay, then compare coefficients and the top five most important features.
-
-> **Status:** This notebook currently contains the assignment instructions. The code cells are empty, so it works as a template for the exercise.
-
-### 4. Store Sales Forecasting: Boosting Models (`examen_final.ipynb`)
+### 3. Store Sales Forecasting: Boosting Models (`examen_final.ipynb`)
 
 A final exam that forecasts daily sales for **Store 3** using Gradient Boosting, XGBoost, and LightGBM, optimized for Mean Absolute Error (MAE).
 
@@ -84,8 +75,6 @@ A final exam that forecasts daily sales for **Store 3** using Gradient Boosting,
 
 **Most important features:** `dayofweek` (36.0%), followed by `is_holiday` (22.4%). Weekend sales run noticeably higher than weekday sales, and holidays produce immediate demand spikes.
 
-> These figures come from the final exam notebook's summary. Re-run the notebook to confirm them.
-
 ### Athlete Weight Prediction and Churn Classification
 
 Results for these notebooks are documented in each notebook's analysis cells. Open the notebooks to review the R² scores, confusion matrices, and classification reports.
@@ -96,7 +85,6 @@ Results for these notebooks are documented in each notebook's analysis cells. Op
 predictive-analysis/
 ├── Taller_EDA_resuelto-2.ipynb        # EDA: Telco customer churn
 ├── AP_Evaluación_1.ipynb              # Linear regression: athlete weight
-├── Taller_regresión_logística.ipynb   # Logistic regression workshop (template)
 ├── examen_final.ipynb                 # Store sales forecasting with boosting
 ├── data/                              # Datasets (not included, see below)
 │   ├── Telco_customer_churn.csv
